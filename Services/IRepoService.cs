@@ -10,6 +10,7 @@ namespace s22686_kol2.Services
     {
         IQueryable<Album> GetAlbum(int IdAlbum);
         Task DeleteMusician(int IdMusician);
+        IQueryable<Musician> GetMusician(int IdMusician);
         Task SaveChangesAsync();
     }
 }

@@ -26,6 +26,12 @@ namespace s22686_kol2.Services
                 .Include(e => e.Tracks);
         }
 
+        public IQueryable<Musician> GetMusician(int IdMusician)
+        {
+            return _repository.Musicians
+                .Where(e => e.IdMusician == IdMusician);
+        }
+
         public async Task SaveChangesAsync()
         {
             await _repository.SaveChangesAsync();
